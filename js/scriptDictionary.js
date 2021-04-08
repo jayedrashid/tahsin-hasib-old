@@ -13,7 +13,7 @@ function wordSearch() {
     var wordToSearch = document.getElementById('searchBox').value;
 
     var request1 = new XMLHttpRequest();
-    request1.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/definitions?limit=10&includeRelated=false&useCanonical=false&includeTags=false&api_key=YOUR_API_KEY', true);
+    request1.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/definitions?limit=10&includeRelated=false&useCanonical=false&includeTags=false&api_key=nuuaaq7xl40jykqmz9a4jtbx7m28y3623gdh4d0f3qvwvl57w', true);
     request1.onload = function () {
         var data = JSON.parse(this.response);
         if (request1.status >= 200 && request1.status < 400) {
@@ -28,7 +28,7 @@ function wordSearch() {
     request1.send();
 
     var request2 = new XMLHttpRequest();
-    request2.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/topExample?useCanonical=false&api_key=YOUR_API_KEY', true);
+    request2.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/topExample?useCanonical=false&api_key=nuuaaq7xl40jykqmz9a4jtbx7m28y3623gdh4d0f3qvwvl57w', true);
     request2.onload = function () {
         var data2 = JSON.parse(this.response);
         if (request2.status >= 200 && request2.status < 400) {
@@ -40,7 +40,7 @@ function wordSearch() {
     request2.send();
 
     var request3 = new XMLHttpRequest();
-    request3.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/audio?useCanonical=false&limit=50&api_key=YOUR_API_KEY', true);
+    request3.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/audio?useCanonical=false&limit=50&api_key=nuuaaq7xl40jykqmz9a4jtbx7m28y3623gdh4d0f3qvwvl57w', true);
     request3.onload = function () {
         var data3 = JSON.parse(this.response);
         if (request3.status >= 200 && request3.status < 400) {
@@ -56,3 +56,4 @@ function wordSearch() {
     }
     request3.send();
 }
+
